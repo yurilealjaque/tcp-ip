@@ -126,7 +126,7 @@ TCP/IP es el fundamento invisible que hace posible Internet tal como lo conocemo
 - Es más simple que OSI pero igual de efectivo
 - Sin TCP/IP, Internet no existiría como lo conocemosTCP_IP
 
-## 🔄 Proceso de conexión en la web {#proceso-conexion}
+## 7. 🔄 Proceso de conexión en la web {#proceso-conexion}
 
 ### Flujo completo: De navegador a servidor
 
@@ -210,7 +210,7 @@ Server: Apache/2.4.41
 
 ---
 
-## 🔐 Seguridad y capa de transporte {#seguridad-transporte}
+## 8. 🔐 Seguridad y capa de transporte {#seguridad-transporte}
 
 ### SSL/TLS: Fundamentos
 
