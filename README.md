@@ -126,6 +126,178 @@ TCP/IP es el fundamento invisible que hace posible Internet tal como lo conocemo
 - Es más simple que OSI pero igual de efectivo
 - Sin TCP/IP, Internet no existiría como lo conocemosTCP_IP
 
+## 3. 🔧 Las 4 capas del modelo TCP/IP
+
+Imagina que Internet es como el sistema postal. Para enviar una carta, necesitas varios pasos y personas trabajando juntas. Internet funciona de manera similar con 4 "capas" o niveles que trabajan en equipo.
+
+### Capa 4: Aplicación (Lo que tú ves)
+Esta es la capa que conoces: las aplicaciones que usas todos los días.
+
+**¿Qué hace?**
+Es como la oficina de correos donde escribes tu carta y pones la dirección.
+
+**Ejemplos que usas todos los días:**
+- **Navegador web** (Chrome, Firefox, Safari): Para ver páginas web
+- **WhatsApp/Telegram**: Para mensajes
+- **Gmail**: Para correo electrónico
+- **YouTube**: Para videos
+- **Instagram**: Para fotos
+
+**Protocolos importantes (son como "idiomas" que usan las computadoras):**
+- **HTTP**: El "idioma" para páginas web normales
+- **HTTPS**: El "idioma" para páginas web seguras (con candado)
+- **DNS**: El "traductor" que convierte www.google.com en números que entienden las computadoras
+
+### Capa 3: Transporte (El repartidor)
+Esta capa se asegura de que tu información llegue completa y en orden.
+
+**¿Qué hace?**
+Es como el repartidor que se asegura de que tu paquete llegue completo a su destino.
+
+**Dos tipos principales:**
+
+**TCP (Confiable pero lento):**
+- Como enviar un paquete certificado
+- Se asegura de que todo llegue perfecto
+- Si algo se pierde, lo vuelve a enviar
+- Perfecto para: páginas web, correos, descargas
+
+**UDP (Rápido pero no tan confiable):**
+- Como gritar información por la ventana
+- Muy rápido pero no garantiza que llegue todo
+- Perfecto para: videos en vivo, videojuegos, llamadas
+
+**Ejemplo simple:** Cuando ves Netflix, usa TCP para cargar la página (debe llegar perfecta) pero UDP para el video (si se pierde un poquito, no importa mucho).
+
+### Capa 2: Internet (El GPS)
+Esta capa encuentra el camino para llegar a tu destino a través de toda la red mundial.
+
+**¿Qué hace?**
+Es como el GPS de tu coche que encuentra la mejor ruta para llegar a tu destino.
+
+**Funciones principales:**
+- Encuentra la ruta más rápida
+- Divide tu información en pedacitos pequeños llamados "paquetes"
+- Cada paquete puede tomar rutas diferentes
+- Al final, se vuelven a juntar en el destino
+
+**Ejemplo simple:** Cuando mandas una foto por WhatsApp, se divide en miles de pedacitos. Cada pedacito puede viajar por diferentes países y cables, pero todos se juntan en el teléfono de tu amigo para formar la foto completa.
+
+### Capa 1: Acceso a Red (Los cables y antenas)
+Esta es la capa física que realmente transporta la información.
+
+**¿Qué hace?**
+Son los "caminos" reales por donde viaja tu información: cables, antenas, fibra óptica.
+
+**Tipos de "caminos":**
+- **Ethernet**: Cable de red (como el cable que conecta tu computadora al router)
+- **Wi-Fi**: Ondas invisibles en el aire (como las señales de radio)
+- **Fibra óptica**: Cables especiales que usan luz para transmitir información súper rápido
+- **4G/5G**: Torres de celular que envían señales a tu teléfono
+
+**Ejemplo simple:** Es como si tu información fuera un auto que puede viajar por carreteras (cables), volar por el aire (Wi-Fi), o viajar a la velocidad de la luz (fibra óptica).
+
+## 4. 📍 Direccionamiento IP: IPv4 vs IPv6
+
+Una dirección IP es como la dirección de tu casa, pero para computadoras en Internet. Cada dispositivo conectado a Internet tiene una dirección única.
+
+**Ejemplo simple:**
+- Tu casa: "Calle 123, Ciudad, País"
+- Tu computadora: "192.168.1.10"
+
+### IPv4: Las Direcciones Tradicionales
+
+**¿Cómo se ven?**
+- Son 4 números separados por puntos
+- Cada número va de 0 a 255
+- Ejemplo: 192.168.1.1
+
+**Características:**
+- Fáciles de recordar y escribir
+- Hay aproximadamente 4,300 millones de direcciones posibles
+- Problema: ¡ya casi no quedan direcciones disponibles!
+
+**Ejemplos famosos:**
+- 8.8.8.8 (Google DNS)
+- 1.1.1.1 (Cloudflare DNS)
+
+### IPv6: Las Direcciones del Futuro
+
+**¿Cómo se ven?**
+- Son más largas y usan letras y números
+- Ejemplo: 2001:0db8:85a3:0000:0000:8a2e:0370:7334
+
+**Características:**
+- Hay tantas direcciones que nunca se van a acabar
+- Más difíciles de recordar
+- Más rápidas y seguras
+- Poco a poco están reemplazando a IPv4
+
+### IP Pública vs IP Privada
+
+#### IP Pública (Tu dirección en Internet)
+**¿Qué es?**
+Es la dirección que te da tu compañía de Internet (como Telmex, Movistar, etc.).
+
+**Características:**
+- Es única en todo el mundo
+- Permite que otros te encuentren en Internet
+- La compartes con todos los dispositivos de tu casa
+
+**Ejemplo:** Tu router tiene una IP pública como 201.123.45.67
+
+#### IP Privada (Tu dirección dentro de casa)
+**¿Qué es?**
+Es la dirección que tu router asigna a cada dispositivo en tu casa.
+
+**Características:**
+- Solo funciona dentro de tu red casera
+- Cada casa puede usar las mismas direcciones privadas
+- No se puede acceder desde Internet directamente
+
+**Direcciones privadas comunes:**
+- 192.168.1.X (la más común en casas)
+- 10.0.0.X
+- 172.16.0.X
+
+**Ejemplo práctico:**
+- Tu router: 201.123.45.67 (IP pública)
+- Tu computadora: 192.168.1.10 (IP privada)
+- Tu celular: 192.168.1.11 (IP privada)
+- Tu tablet: 192.168.1.12 (IP privada)
+
+## Ejemplo Completo: ¿Qué pasa cuando abres YouTube?
+
+Para entender mejor, veamos qué pasa cuando escribes "youtube.com" en tu navegador:
+
+1. **Capa de Aplicación**: Tu navegador dice "quiero ver YouTube"
+2. **DNS**: Tu computadora pregunta "¿cuál es la dirección IP de YouTube?" y recibe una respuesta como "208.65.153.238"
+3. **Capa de Transporte**: Tu computadora divide la solicitud en paquetes pequeños usando TCP
+4. **Capa de Internet**: Cada paquete busca la mejor ruta para llegar a los servidores de YouTube
+5. **Capa de Acceso a Red**: Los paquetes viajan por Wi-Fi, cables, fibra óptica, etc.
+6. **YouTube responde**: El proceso se repite al revés para enviarte la página web
+7. **Tu navegador**: Recibe todos los paquetes, los junta y te muestra YouTube
+
+¡Todo esto pasa en menos de un segundo!
+
+## Consejos Prácticos
+
+**Para ver tu IP:**
+- Googlea "cuál es mi IP" para ver tu IP pública
+- En Windows: abre "cmd" y escribe "ipconfig" para ver tu IP privada
+- En Mac: ve a Preferencias del Sistema > Red
+
+**Para entender mejor:**
+- Piensa en Internet como una ciudad gigante con millones de casas (computadoras)
+- Cada casa tiene una dirección única (IP)
+- Hay carteros súper rápidos (protocolos) que entregan mensajes
+- Todo está conectado por carreteras (cables) y ondas de radio (Wi-Fi)
+
+## Conclusión
+
+Internet puede parecer mágico, pero en realidad es como un sistema postal súper avanzado que funciona con reglas muy específicas. Las 4 capas trabajan juntas como un equipo perfecto para que puedas ver videos, enviar mensajes y navegar por la web desde cualquier lugar del mundo.
+
+
 ## 7. 🔄 Proceso de conexión en la web {#proceso-conexion}
 
 ### Flujo completo: De navegador a servidor
