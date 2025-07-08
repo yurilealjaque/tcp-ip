@@ -297,6 +297,40 @@ Para entender mejor, veamos qué pasa cuando escribes "youtube.com" en tu navega
 
 Internet puede parecer mágico, pero en realidad es como un sistema postal súper avanzado que funciona con reglas muy específicas. Las 4 capas trabajan juntas como un equipo perfecto para que puedas ver videos, enviar mensajes y navegar por la web desde cualquier lugar del mundo.
 
+# 5. 🌐 Protocolos Claves en el Día a Día Web
+
+## 🔑 Protocolos Fundamentales
+
+| Protocolo | Significado                          | ¿Para qué sirve?                                              | Ejemplo común                                |
+|----------|--------------------------------------|----------------------------------------------------------------|---------------------------------------------|
+| **HTTP** | HyperText Transfer Protocol          | Transfiere páginas web sin cifrado.                           | Visitar `http://ejemplo.com`                |
+| **HTTPS**| HTTP Secure                          | HTTP cifrado con SSL/TLS para mayor seguridad.                | Iniciar sesión en `https://gmail.com`       |
+| **DNS**  | Domain Name System                   | Traduce nombres de dominio a direcciones IP.                  | `www.google.com` → `142.250.190.4`          |
+| **DHCP** | Dynamic Host Configuration Protocol  | Asigna automáticamente una IP a los dispositivos.             | Al conectarte al Wi-Fi, el router te da una IP |
+| **TCP**  | Transmission Control Protocol        | Protocolo confiable que garantiza entrega y orden de los datos. | Navegar en la web, enviar un email          |
+| **UDP**  | User Datagram Protocol               | Más rápido, pero sin garantía de entrega ni orden.            | Streaming en vivo, videollamadas, juegos    |
+
+---
+
+## ⚖️ Comparación: TCP vs. UDP
+
+| Característica        | **TCP**                                      | **UDP**                                     |
+|-----------------------|----------------------------------------------|---------------------------------------------|
+| Confiabilidad         | Alta (verifica y confirma entrega)           | Baja (no confirma entrega)                  |
+| Velocidad             | Más lento                                    | Más rápido                                  |
+| Orden de los datos    | Sí, garantiza el orden                       | No garantiza el orden                       |
+| Tolerancia a errores  | Alta (retransmite si hay error)              | Baja (si hay pérdida, no reenvía)           |
+| Uso común             | Web, email, FTP                              | Streaming, videojuegos, llamadas VoIP       |
+| Ejemplo               | `https://openai.com`                         | YouTube Live, Zoom, juegos en línea         |
+
+---
+
+## 🧠 ¿Por qué son importantes para desarrolladores web?
+
+- **HTTP/HTTPS**: Usado en cada aplicación web.
+- **DNS**: Necesario para acceder por nombre en lugar de IP.
+- **DHCP**: Fundamental para conectividad automática.
+- **TCP/UDP**: Clave para elegir según el tipo de comunicación: confiable (web) vs. veloz (streaming).
 
 ## 7. 🔄 Proceso de conexión en la web {#proceso-conexion}
 
